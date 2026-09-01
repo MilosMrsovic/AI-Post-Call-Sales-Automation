@@ -1,0 +1,5 @@
+{
+  "recommendedAction": "REQUEST_MISSING_INFORMATION",
+  "reason": "Budget and timeline are confirmed but the decision maker was not present and internal approval is unclear, which blocks sending a proposal now.",
+  "priority": "HIGH"
+}
