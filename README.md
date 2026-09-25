@@ -359,40 +359,9 @@ and
 
 ## Architecture
 
-```text
-SALES CALL
-    │
-    ▼
-GRANOLA ──► ZAPIER ──► GOOGLE SHEET
-                            │
-                            ▼
-                   n8n (Sheets Trigger)
-                            │
-                            ▼
-                AI 1: EXTRACT CALL INTELLIGENCE
-                            │
-                            ▼
-                  DETERMINISTIC SCORING
-              (Proposal Readiness, Deal Health)
-                            │
-                            ▼
-                AI 2: RECOMMEND NEXT ACTION
-                            │
-                            ▼
-                       RULES GUARD
-                   (allow or override)
-                            │
-                            ▼
-                       GOHIGHLEVEL
-                            │
-                            ▼
-                    EXECUTION ROUTER
-                            │
-    ┌──────────┬────────────┼────────────┬──────────┐
-    ▼          ▼            ▼            ▼          ▼
-PROPOSAL   MISSING INFO  FOLLOW-UP   NEXT CALL   HUMAN REVIEW
-(PDFShift)
-```
+Technical view of the same flow:
+
+![Technical Architecture](postcall_architecture_technical.png)
 
 ---
 
@@ -475,7 +444,8 @@ AI-Post-Call-Sales-Automation/
 │   ├── granola_input_notes.png
 │   └── n8n_workflow.png
 │
-├── postcall_architecture.png
+├── postcall_architecture.png             # client-friendly overview
+├── postcall_architecture_technical.png   # technical flow
 ├── sample_output1.json   # extraction output from the demo call
 ├── sample_output2.json   # AI recommendation for the same call
 └── README.md
